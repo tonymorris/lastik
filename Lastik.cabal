@@ -1,13 +1,13 @@
 Name:               Lastik
-Version:            0.7.1
+Version:            0.7.2
 License:            BSD3
 License-File:       LICENSE
-Author:             Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>
+Author:             Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>, Dylan Just <ɯoɔ˙sʇuǝbuɐʇɥɔǝʇ@uɐןʎp>
 Maintainer:         Tony Morris
 Synopsis:           A library for compiling programs in a variety of languages
 Category:           Development
 Description:        A library for compiling programs in a variety of languages including Java, Scala and C#.
-Homepage:           https://bitbucket.org/dibblego/lastik/
+Homepage:           https://github.com/tonymorris/lastik/
 Cabal-version:      >= 1.2
 Build-Type:         Simple
 
