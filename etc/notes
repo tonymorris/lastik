@@ -1,0 +1,28 @@
+type FilePaths = [FilePath]
+
+-- Under revision
+OutputReference r
+  set :: FilePaths -> r -> r
+  get :: r -> FilePaths
+
+-- Under revision
+OutputDirectory r
+  outputDirectory :: r -> Maybe FilePath
+
+type Extension = String
+
+-- Returns [.java]
+Extensions r
+  extensions :: r -> [Extension]
+
+-- Produces the full coecommand to shell
+ExecCommand r => CompileCommand r
+  (~>) :: r -> FilePaths -> String
+
+-- Returns javac or checks env vars
+ExecCommand r
+  command :: r -> IO String
+
+-- Returns the java source that produced a class file
+CompileSource r
+  source :: r -> FilePath -> FilePath

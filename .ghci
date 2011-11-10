@@ -1,0 +1,7 @@
+:m + Test.QuickCheck
+:l System.Build
+:m + System.Build
+:set prompt ">> "
+:set -Wall
+:set -fno-warn-name-shadowing
+:set -fno-warn-orphans

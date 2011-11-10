@@ -1,0 +1,126 @@
+Name:               Lastik
+Version:            0.7.1
+License:            BSD3
+License-File:       LICENSE
+Author:             Tony Morris <ʇǝu˙sıɹɹoɯʇ@ןןǝʞsɐɥ>
+Maintainer:         Tony Morris
+Synopsis:           A library for compiling programs in a variety of languages
+Category:           Development
+Description:        A library for compiling programs in a variety of languages including Java, Scala and C#.
+Homepage:           https://bitbucket.org/dibblego/lastik/
+Cabal-version:      >= 1.2
+Build-Type:         Simple
+
+Flag small_base
+  Description:      Choose the new, split-up base package.
+
+Library
+  Build-Depends:
+                    base < 5 && >= 3
+                    , bytestring
+                    , directory
+                    , filepath
+                    , FilePather
+                    , process
+                    , pureMD5
+                    , SHA
+                    , containers
+                    , binary
+                    , language-java
+                    , language-java-classfile
+                    , zip-archive
+                    , UtilityTM
+                    , Command
+
+  GHC-Options:
+                    -Wall
+                    -fno-warn-name-shadowing
+                    -fno-warn-orphans
+
+  Exposed-Modules:
+                      System.Build
+
+                    , System.Build.Access.AnnotationOptions
+                    , System.Build.Access.Author
+                    , System.Build.Access.Bootclasspath
+                    , System.Build.Access.Bottom
+                    , System.Build.Access.Breakiterator
+                    , System.Build.Access.Charset
+                    , System.Build.Access.Classpath
+                    , System.Build.Access.Debug
+                    , System.Build.Access.Deprecation
+                    , System.Build.Access.Directory
+                    , System.Build.Access.Docencoding
+                    , System.Build.Access.Docfilessubdirs
+                    , System.Build.Access.Doclet
+                    , System.Build.Access.Docletpath
+                    , System.Build.Access.Doctitle
+                    , System.Build.Access.Encoding
+                    , System.Build.Access.Endorseddirs
+                    , System.Build.Access.Etc
+                    , System.Build.Access.Excludedocfilessubdir
+                    , System.Build.Access.Exclude
+                    , System.Build.Access.Extdirs
+                    , System.Build.Access.Flags
+                    , System.Build.Access.Footer
+                    , System.Build.Access.Group
+                    , System.Build.Access.Header
+                    , System.Build.Access.Helpfile
+                    , System.Build.Access.Help
+                    , System.Build.Access.Implicit
+                    , System.Build.Access.Keywords
+                    , System.Build.Access.Link
+                    , System.Build.Access.Linkoffline
+                    , System.Build.Access.Linksource
+                    , System.Build.Access.Locale
+                    , System.Build.Access.Nocomment
+                    , System.Build.Access.Nodeprecated
+                    , System.Build.Access.Nodeprecatedlist
+                    , System.Build.Access.Nohelp
+                    , System.Build.Access.Noindex
+                    , System.Build.Access.Nonavbar
+                    , System.Build.Access.Noqualifier
+                    , System.Build.Access.Nosince
+                    , System.Build.Access.Notimestamp
+                    , System.Build.Access.Notree
+                    , System.Build.Access.NoWarn
+                    , System.Build.Access.Overview
+                    , System.Build.Access.Package
+                    , System.Build.Access.Private
+                    , System.Build.Access.Processor
+                    , System.Build.Access.Processorpath
+                    , System.Build.Access.Proc
+                    , System.Build.Access.Protected
+                    , System.Build.Access.Public
+                    , System.Build.Access.Quiet
+                    , System.Build.Access.Serialwarn
+                    , System.Build.Access.Source
+                    , System.Build.Access.Sourcepath
+                    , System.Build.Access.Sourcetab
+                    , System.Build.Access.Splitindex
+                    , System.Build.Access.Src
+                    , System.Build.Access.Stylesheetfile
+                    , System.Build.Access.Subpackages
+                    , System.Build.Access.Tag
+                    , System.Build.Access.Taglet
+                    , System.Build.Access.Tagletpath
+                    , System.Build.Access.Target
+                    , System.Build.Access.Top
+                    , System.Build.Access.Use
+                    , System.Build.Access.Verbose
+                    , System.Build.Access.Version
+                    , System.Build.Access.Windowtitle
+
+                    , System.Build.Compile
+                    , System.Build.Compile.Options
+                    , System.Build.Compile.Extensions
+                    , System.Build.Compile.ExecCommand
+                    , System.Build.Compile.SourceFile
+
+                    , System.Build.Data
+                    , System.Build.Data.KeyPValue
+                    , System.Build.Data.SourceRelease
+
+                    , System.Build.Java
+                    , System.Build.Java.Javac
+                    , System.Build.Java.Javadoc
